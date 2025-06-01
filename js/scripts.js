@@ -192,7 +192,7 @@ const muziklistesi = [
     image: "img/cem adrian sen benim şarkılarımsın.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/ahmet beyin ceketi.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Git",
@@ -200,7 +200,7 @@ const muziklistesi = [
     image: "img/maxresdefault.jpg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/ahmet beyin ceketi.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Beyaz Skandalım",
@@ -216,7 +216,7 @@ const muziklistesi = [
     image: "img/mabel.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/ahmet beyin ceketi.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Hoşçakal",
@@ -232,7 +232,7 @@ const muziklistesi = [
     image: "img/papatya.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/ahmet beyin ceketi.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Değmesin Ellerimiz",
@@ -248,7 +248,7 @@ const muziklistesi = [
     image: "img/nil.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/lose_yourself.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Sevmemeliyiz",
@@ -264,7 +264,7 @@ const muziklistesi = [
     image: "img/yalan.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/lose_yourself.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Aşkın Kanunu",
@@ -280,7 +280,7 @@ const muziklistesi = [
     image: "img/gökyüzü.jpeg",
     description: "Motivasyon bombası.",
     genre: "slow",
-    audio: "audio/lose_yourself.mp3",
+    audio: "audio/Ahmet Beyin Ceketi.mp3",
   },
   {
     title: "Sopa",

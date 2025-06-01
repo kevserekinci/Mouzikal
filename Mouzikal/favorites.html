@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Favori Müzikler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-music mr-2"></i>
+                Müzik Uygulaması
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="favorites.html">Favoriler</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="mb-4">Favori Müzikler</h2>
+        <div id="favorite-list" class="row"></div>
+    </div>
+
+    <script>
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const container = document.getElementById("favorite-list");
+
+    if (favorites.length === 0) {
+        container.innerHTML = "<p>Hiç favori müzik eklenmemiş.</p>";
+    } else {
+        favorites.forEach(music => {
+            const col = document.createElement("div");
+            col.className = "col-md-4 mb-4";
+
+            col.innerHTML = `
+                <div class="card h-100 shadow-sm">
+                    <img src="${music.image}" class="card-img-top" alt="${music.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${music.title}</h5>
+                        <p class="card-text">${music.artist}</p>
+                        <audio controls class="w-100 mt-2">
+                            <source src="${music.audio}" type="audio/mpeg">
+                            Tarayıcınız audio öğesini desteklemiyor.
+                        </audio>
+                    </div>
+                </div>
+            `;
+
+            container.appendChild(col);
+        });
+
+        // Bir müzik çalarken diğerlerini durdur
+        const allAudios = document.querySelectorAll("audio");
+        allAudios.forEach(audio => {
+            audio.addEventListener("play", () => {
+                allAudios.forEach(other => {
+                    if (other !== audio) {
+                        other.pause();
+                    }
+                });
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

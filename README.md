@@ -31,4 +31,4 @@ Bu proje, temel web teknolojileri (HTML, CSS, JavaScript) kullanılarak gelişti
 
 1. Projeyi indir:
    ```bash
-   git clone
+   git clone https://github.com/kevserekinci/Mouzikal.git
